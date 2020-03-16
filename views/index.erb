@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="css/madetech-frontend.css?v=f42a6aa3c46d12da9b0db85943ec2e7212035baf">
+  <link rel="stylesheet" href="css/highlighting.css?v=f42a6aa3c46d12da9b0db85943ec2e7212035baf">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <nav class="p-0 flex-column flex-lg-row navbar navbar-expand">
+        <div class="mr-lg-auto">
+          <div class="header__logo">
+            <a href="/" class="header__logo_link">
+              <div class="header_logo_type--by">
+                <span class="header_logo_type__text">The Bar</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mt-5">
+    <div class="row" style="height:calc(100vh - 220px);">
+      <div class="col-md-8 offset-md-2">
+        <h1>You have found the bar.</h1>
+        <% if ENV['BAR_OPEN'] == 'yes' %>
+          <h2>The bar is currently open</h2>
+          <a href="/ready1">I am ready to enter</a>
+        <% else %>
+          <h2>The bar is currently closed</h2>
+        <% end %>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-7 col-lg-4 text-left text-lg-center">
+          <a class="footer__logo" href="https://www.madetech.com" rel="home">
+            <img src="images/made-tech-logo-wht.png" height="25" alt="Made Tech">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+  <script src="js/madetech-frontend.js"></script>
+</body>
+</html>
